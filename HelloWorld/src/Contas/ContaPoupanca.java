@@ -6,6 +6,6 @@ public class ContaPoupanca extends ContaBancaria {
 	}
 	
 	public String getTipo() {
-		return this.tipo + " Poupança";
+		return "Conta Poupança";
 	}
 }

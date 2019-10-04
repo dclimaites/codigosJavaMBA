@@ -1,16 +1,6 @@
 package heranca;
 
-public abstract class Funcionario {
-	
-	Funcionario() {
-		
-	}
-	
-	Funcionario(int numero, String nome) {
-		setNumero(numero);
-		setNome(nome);
-	}
-
+public class Funcionario {
 	private int numero;
 	private String nome;
 	
@@ -30,10 +20,6 @@ public abstract class Funcionario {
 	
 	public void trabalha() {
 		System.out.println("Funcionário que trabalha");
-	}
-
-	public int getBonificacao() {
-		return 10;
 	}
 
 }

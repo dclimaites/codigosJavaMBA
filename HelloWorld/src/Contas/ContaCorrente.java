@@ -6,10 +6,11 @@ public class ContaCorrente extends ContaBancaria {
 		super(titular, numero);
 	}
 	
+	@Override
 	public void saque(double valor) throws Exception {
 		if(valor <= this.getSaldo())
 		{
-			saldo = (saldo - valor) - 10;
+			saldo -= valor + 0.10;
 		}
 		else {
 			throw new Exception("Não é possível sacar o valor desejado, seu saldo é de " + this.saldo);
@@ -17,9 +18,6 @@ public class ContaCorrente extends ContaBancaria {
 	}
 	
 	public String getTipo() {
-		return this.tipo + " Corrente";
+		return "Conta Corrente";
 	}
-	
-	
-	
 }

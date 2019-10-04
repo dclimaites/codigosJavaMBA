@@ -3,7 +3,7 @@ package heranca;
 public class Teste {
 
 	public static void main(String[] args) {
-		Funcionario f1 = new Funcionario();
+		Motorista f1 = new Motorista();
 		f1.setNome("Diego");
 		f1.trabalha();
 		
@@ -17,7 +17,7 @@ public class Teste {
 		 * */
 		Funcionario[] arrayFunc = new Funcionario[10];
 		arrayFunc[0] = f1;
-		arrayFunc[1] = new Funcionario(555, "Pepe");
+		arrayFunc[1] = new Motorista(555, "Pepe");
 		arrayFunc[2] = new Motorista(666, "Satã");
 		
 		System.out.println(arrayFunc[0].getNome());

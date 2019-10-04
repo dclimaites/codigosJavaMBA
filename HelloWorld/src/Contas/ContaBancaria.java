@@ -1,15 +1,13 @@
 package Contas;
 
-public class ContaBancaria {
+public abstract class ContaBancaria {
 	protected String titular;
 	protected double saldo;
 	protected int numero;
-	protected String tipo;
 	
 	public ContaBancaria(String titular, int numero) {
 		setTitular(titular);
 		setNumero(numero);
-		this.tipo = "Conta ";
 	}
 	
 	public void setTitular(String titular) {
@@ -49,7 +47,5 @@ public class ContaBancaria {
 		}
 	}
 
-	public String getTipo() {
-		return tipo;
-	}
+	public abstract String getTipo();
 }
