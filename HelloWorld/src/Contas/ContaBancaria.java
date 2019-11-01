@@ -30,9 +30,9 @@ public abstract class ContaBancaria {
 		return saldo;
 	}
 	
-	public void deposita(double valor) throws Exception {
+	public void deposita(double valor) throws SaldoInsuficiente {
 		if(valor < 0)
-			throw new Exception("Não é possível depositar valores negativos");
+			throw new SaldoInsuficiente("Não é possível depositar valores negativos");
 		
 		saldo += valor;
 	}
