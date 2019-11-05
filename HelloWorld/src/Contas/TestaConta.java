@@ -6,7 +6,7 @@ public class TestaConta {
 			ContaPoupanca conta1 = new ContaPoupanca("Diego Climaites", 1);
 			ContaCorrente conta2 = new ContaCorrente("Felipe Climaites", 2);
 			
-			conta1.deposita(500);
+			conta1.deposita(300000);
 			conta1.saque(470);
 			//System.out.println(conta1.getSaldo());
 			
@@ -23,6 +23,13 @@ public class TestaConta {
 			System.out.println(conta2.getNumero());
 			System.out.println(conta2.getSaldo());
 			System.out.println(conta2.getTipo());
+			
+			if(ClassificacaoClientes.BAIXO.isCompatible(conta1))
+				System.out.println("Conta 1 é de baixo potencial");
+			else if(ClassificacaoClientes.MEDIO.isCompatible(conta1))
+				System.out.println("Conta 1 é de médio potencial");
+			else if(ClassificacaoClientes.POTENCIAL.isCompatible(conta1))
+				System.out.println("Conta 1 é de grande potencial");
 			
 			
 		}

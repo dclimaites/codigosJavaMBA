@@ -6,8 +6,15 @@ public enum ClassificacaoClientes {
 	private double faixaInicial;
 	private double faixaFinal;
 	
-	public ClassificacaoClientes(double faixaInicial, faixaFinal) {
+	ClassificacaoClientes(double faixaInicial, double faixaFinal) {
 		this.faixaInicial = faixaInicial;
 		this.faixaFinal = faixaFinal;
+	}
+	
+	public boolean isCompatible(ContaBancaria contaBancaria) {
+		if(contaBancaria.getSaldo() >= this.faixaInicial && contaBancaria.getSaldo() <= this.faixaFinal)
+			return true;
+		
+		return false;
 	}
 }
